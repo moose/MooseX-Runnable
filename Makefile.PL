@@ -16,6 +16,8 @@ build_requires 'Test::More';
 build_requires 'ok';
 build_requires 'Test::TableDriven';
 
+resources repository => 'git://git.moose.perl.org/MooseX-Runnable.git';
+
 install_script 'bin/mx-run';
 
 WriteAll();
