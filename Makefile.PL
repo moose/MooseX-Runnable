@@ -6,7 +6,7 @@ all_from 'lib/MooseX/Runnable.pm';
 requires 'Moose';
 requires 'MooseX::Getopt'; # not really
 requires 'MooseX::Types' => '0.10';
-requires 'Path::Tiny';
+requires 'Path::Tiny' => '0.009';    # need this version for 5.8 support
 requires 'MooseX::Types::Path::Tiny';
 requires 'namespace::autoclean';
 requires 'List::MoreUtils';
