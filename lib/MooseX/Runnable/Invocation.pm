@@ -4,9 +4,8 @@ use MooseX::Types -declare => ['RunnableClass'];
 use MooseX::Types::Moose qw(Str HashRef ArrayRef);
 use List::MoreUtils qw(uniq);
 use Params::Util qw(_CLASS);
+use Module::Runtime 'use_module';
 use namespace::autoclean;
-
-require Class::MOP;
 
 # we can't load the class until plugins are loaded,
 # so we have to handle this outside of coerce
@@ -45,7 +44,7 @@ sub BUILD {
         $plugin = "$plugin_ns$plugin" unless $plugin =~ /^[+]/;
         $plugin =~ s/^[+]//g;
 
-        Class::MOP::load_class( $plugin );
+        use_module( $plugin );
 
         my $does_cmdline = $plugin->meta->
           does_role('MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs');
@@ -81,7 +80,7 @@ sub load_class {
     my $self = shift;
     my $class = $self->class;
 
-    Class::MOP::load_class( $class );
+    use_module( $class );
 
     confess 'We can only work with Moose classes with "meta" methods'
       if !$class->can('meta');
@@ -123,7 +122,7 @@ sub _convert_role_to_scheme {
     $name = "MooseX::Runnable::Invocation::Scheme::$name";
 
     return eval {
-        Class::MOP::load_class($name);
+        use_module($name);
         warn "$name was loaded OK, but it's not a role!" and return
           unless $name->meta->isa('Moose::Meta::Role');
         return $name->meta;
