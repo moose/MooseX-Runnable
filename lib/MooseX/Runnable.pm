@@ -1,7 +1,6 @@
 package MooseX::Runnable;
+# ABSTRACT: Tag a class as a runnable application
 use Moose::Role;
-
-our $VERSION = '0.03';
 
 requires 'run';
 
@@ -9,9 +8,7 @@ requires 'run';
 
 __END__
 
-=head1 NAME
-
-MooseX::Runnable - tag a class as a runnable application
+=pod
 
 =head1 SYNOPSIS
 
@@ -104,17 +101,4 @@ Many of the plugins shipped are unstable; they may go away, change,
 break, etc.  If there is no documentation for a plugin, it is probably
 just a prototype.
 
-=head1 REPOSITORY
-
-L<http://github.com/jrockway/moosex-runnable>
-
-=head1 AUTHOR
-
-Jonathan Rockway C<< <jrockway@cpan.org> >>
-
-=head1 COPYRIGHT
-
-Copyright (c) 2009 Jonathan Rockway
-
-This module is Free Software, you can redistribute it under the same
-terms as Perl itself.
+=cut

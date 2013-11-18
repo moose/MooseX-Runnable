@@ -1,4 +1,6 @@
 package MooseX::Runnable::Util::ArgParser;
+# ABSTRACT: parse @ARGV for mx-run
+
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);
@@ -260,9 +262,7 @@ sub guess_cmdline {
 
 __END__
 
-=head1 NAME
-
-MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
+=pod
 
 =head1 SYNOPSIS
 

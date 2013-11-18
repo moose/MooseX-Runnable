@@ -1,4 +1,5 @@
 package MooseX::Runnable::Run;
+# ABSTRACT: Run a MooseX::Runnable class as an application
 use strict;
 use warnings;
 
@@ -38,9 +39,7 @@ sub import {
 
 __END__
 
-=head1 NAME
-
-MooseX::Runnable::Run - run a MooseX::Runnable class as an application
+=pod
 
 =head1 SYNOPSIS
 
@@ -80,3 +79,5 @@ L<mx-run>, a script that will run MooseX::Runnable apps, saving you
 valuable seconds!
 
 L<MooseX::Runnable>
+
+=cut

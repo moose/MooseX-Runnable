@@ -1,4 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
+# ABSTRACT: print debugging information
+
 use Moose::Role;
 
 with 'MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs';
@@ -51,9 +53,7 @@ for my $method (qw{
 
 __END__
 
-=head1 NAME
-
-MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
+=pod
 
 =head1 DESCRIPTION
 
@@ -65,3 +65,5 @@ messages.
 =head1 SEE ALSO
 
 L<MooseX::Runnable>
+
+=cut

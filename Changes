@@ -1,4 +1,6 @@
+Revision history for {{$dist->name}}
 
+{{$NEXT}}
         - converted uses of Path::Class to Path::Tiny (Karen Etheridge)
         - removed use of deprecated Class::MOP::load_class
 
