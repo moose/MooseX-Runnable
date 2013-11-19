@@ -264,6 +264,8 @@ __END__
 
 =pod
 
+=for stopwords mx
+
 =head1 SYNOPSIS
 
     my $parser = MooseX::Runnable::Util::ArgParser->new(

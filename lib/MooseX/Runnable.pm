@@ -53,7 +53,7 @@ let's the computer abstract away some of the tedium this entails.
 
 =head2 run
 
-Your class must implement C<run>.  It accepts the commandline args
+Your class must implement C<run>.  It accepts the command-line args
 (that were not consumed by another parser, if applicable) and returns
 an integer representing the UNIX exit value.  C<return 0> means
 success.
