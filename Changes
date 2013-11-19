@@ -4,6 +4,7 @@ Revision history for {{$dist->name}}
         - converted uses of Path::Class to Path::Tiny (Karen Etheridge)
         - removed use of deprecated Class::MOP::load_class
         - converted uses of Test::Exception to Test::Fatal
+        - repository migrated from shadowcat to the github moose organization
 
 0.03   2010-06-27 04:19:41Z
         - modified verification of RunnableClass values to use
