@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::Exception;
+use Test::Fatal;
 use Test::More tests => 7;
 
 use MooseX::Runnable::Invocation;
@@ -40,38 +40,38 @@ my $initargs;
 }
 
 my $i;
-lives_ok {
+is exception {
     $i = MooseX::Runnable::Invocation->new(
         class => 'Class',
         plugins => {
             '+Plugin' => [qw/foo bar baz/],
         },
     );
-} 'created invocation without dying';
+}, undef, 'created invocation without dying';
 
 ok $i, 'created invocation ok';
 ok $i->run, 'ran ok';
 is $initargs, 'foo,bar,baz', 'got initargs';
 
-throws_ok {
+like exception {
     MooseX::Runnable::Invocation->new(
         class => 'Class',
         plugins => {
             '+Argless' => ['args go here'],
         },
     );
-} qr/Perhaps/, 'argless + args = error';
+}, qr/Perhaps/, 'argless + args = error';
 
-lives_ok {
+is exception {
     MooseX::Runnable::Invocation->new(
         class => 'Class',
         plugins => {
             '+Argless' => [],
         },
     );
-} 'argless + no args = ok';
+}, undef, 'argless + no args = ok';
 
-lives_ok {
+is exception {
     MooseX::Runnable::Invocation->new(
         class => 'Class',
         plugins => {
@@ -79,4 +79,4 @@ lives_ok {
             '+Plugin2' => [],
         },
     );
-} 'two plugins with args compose OK';
+}, undef, 'two plugins with args compose OK';

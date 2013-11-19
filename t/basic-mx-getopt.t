@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::Exception;
+use Test::Fatal;
 use Test::More tests => 9;
 
 use MooseX::Runnable::Invocation;
@@ -39,9 +39,9 @@ foreach my $class (qw(Class Class2))
     ok $invocation, 'class is instantiatable';
 
     my $code;
-    lives_ok {
+    is exception {
         $code = $invocation->run('--foo', '42', 0);
-    } 'run lived';
+    }, undef, 'run lived';
 
     is $foo, '42', 'got foo from cmdline';
 

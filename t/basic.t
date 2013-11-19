@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::Exception;
+use Test::Fatal;
 use Test::More tests => 8;
 
 use ok 'MooseX::Runnable';
@@ -25,9 +25,9 @@ my $invocation = MooseX::Runnable::Invocation->new(
 ok $invocation;
 
 my $code;
-lives_ok {
+is exception {
     $code = $invocation->run(1,2,3);
-} 'run lived';
+}, undef, 'run lived';
 
 is $code, 6, 'run worked';
 
@@ -49,8 +49,8 @@ $invocation = MooseX::Runnable::Invocation->new(
 
 ok $invocation;
 
-lives_ok {
+is exception {
     $code = $invocation->run(1,2,3);
-} 'run lived';
+}, undef, 'run lived';
 
 is $code, 0, 'run worked, and plugin changed the return code';
