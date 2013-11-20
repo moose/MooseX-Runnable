@@ -4,7 +4,7 @@ MooseX::Runnable - Tag a class as a runnable application
 
 # VERSION
 
-version 0.05
+version 0.06
 
 # SYNOPSIS
 

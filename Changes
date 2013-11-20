@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.06      2013-11-20 06:36:45Z
         - fixed failing unit tests that define classes inline
 
 0.05      2013-11-19 03:36:29Z
