@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        - fixed failing unit tests that define classes inline
 
 0.05      2013-11-19 03:36:29Z
         - fix repository metadata
