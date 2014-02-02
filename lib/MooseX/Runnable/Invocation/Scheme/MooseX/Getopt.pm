@@ -1,4 +1,5 @@
 package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
+
 use Moose::Role;
 
 around validate_class => sub {

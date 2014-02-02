@@ -1,4 +1,5 @@
 package MooseX::Runnable::Invocation::Role::WithParsedArgs;
+
 use Moose::Role;
 use MooseX::Runnable::Util::ArgParser;
 

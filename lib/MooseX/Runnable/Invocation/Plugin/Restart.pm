@@ -1,4 +1,5 @@
 package MooseX::Runnable::Invocation::Plugin::Restart;
+
 use Moose::Role;
 use MooseX::Types::Moose qw(Str);
 use AnyEvent;

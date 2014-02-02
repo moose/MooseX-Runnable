@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::PAR;
-use Moose::Role;
 
+use Moose::Role;
 use Module::ScanDeps ();
 use App::Packer::PAR ();
 use MooseX::Runnable::Run;

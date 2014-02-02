@@ -1,7 +1,7 @@
-package MooseX::Runnable::Run;
-# ABSTRACT: Run a MooseX::Runnable class as an application
 use strict;
 use warnings;
+package MooseX::Runnable::Run;
+# ABSTRACT: Run a MooseX::Runnable class as an application
 
 use MooseX::Runnable::Invocation;
 

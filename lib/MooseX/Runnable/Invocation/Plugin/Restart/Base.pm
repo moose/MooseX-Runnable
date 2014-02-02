@@ -1,4 +1,5 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Base;
+
 use Moose::Role;
 use MooseX::Types::Moose qw(Int);
 use namespace::autoclean;

@@ -1,4 +1,5 @@
 package MooseX::Runnable::Invocation::Plugin::Profile;
+
 use Moose::Role;
 
 before 'load_class' => sub {
