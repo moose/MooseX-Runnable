@@ -1,6 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Profile;
 
 use Moose::Role;
+use namespace::autoclean;
 
 before 'load_class' => sub {
     my ($self) = @_;

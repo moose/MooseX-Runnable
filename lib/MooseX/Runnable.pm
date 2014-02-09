@@ -2,6 +2,7 @@ package MooseX::Runnable;
 # ABSTRACT: Tag a class as a runnable application
 
 use Moose::Role;
+use namespace::autoclean;
 
 requires 'run';
 

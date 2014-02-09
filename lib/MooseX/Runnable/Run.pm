@@ -4,6 +4,7 @@ package MooseX::Runnable::Run;
 # ABSTRACT: Run a MooseX::Runnable class as an application
 
 use MooseX::Runnable::Invocation;
+use namespace::autoclean;
 
 sub run_application($;@) {
     my ($app, @args) = @_;

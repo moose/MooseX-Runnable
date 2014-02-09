@@ -2,6 +2,7 @@ package MooseX::Runnable::Invocation::Plugin::Debug;
 # ABSTRACT: print debugging information
 
 use Moose::Role;
+use namespace::autoclean;
 
 with 'MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs';
 

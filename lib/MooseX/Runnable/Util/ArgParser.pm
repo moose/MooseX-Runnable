@@ -6,7 +6,6 @@ use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);
 use Path::Tiny; # exports path()
 use List::MoreUtils qw(first_index);
-
 use FindBin;
 
 use namespace::autoclean -also => ['_look_for_dash_something', '_delete_first'];

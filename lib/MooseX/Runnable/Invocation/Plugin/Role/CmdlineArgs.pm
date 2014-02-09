@@ -1,6 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs;
 
 use Moose::Role;
+use namespace::autoclean;
 
 requires '_build_initargs_from_cmdline';
 

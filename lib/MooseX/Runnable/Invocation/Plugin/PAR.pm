@@ -4,10 +4,9 @@ use Moose::Role;
 use Module::ScanDeps ();
 use App::Packer::PAR ();
 use MooseX::Runnable::Run;
-
 use Data::Dump::Streamer;
-
 use File::Temp qw(tempfile);
+use namespace::autoclean;
 
 my $mk_scanner = sub {
     my $class = Moose::Meta::Class->create_anon_class( superclasses => ['Moose::Object'] );

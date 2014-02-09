@@ -1,6 +1,7 @@
 package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
 
 use Moose::Role;
+use namespace::autoclean;
 
 around validate_class => sub {
     return; # always valid
