@@ -4,7 +4,7 @@ MooseX::Runnable - Tag a class as a runnable application
 
 # VERSION
 
-version 0.06
+version 0.07
 
 # SYNOPSIS
 
@@ -29,7 +29,7 @@ Then you can run this class as an application with the included
     Hello, jrockway.
     $
 
-`MooseX::Runnable` supports [MooseX::Getopt](http://search.cpan.org/perldoc?MooseX::Getopt), and
+`MooseX::Runnable` supports [MooseX::Getopt](https://metacpan.org/pod/MooseX::Getopt), and
 other similar systems (and is extensible, in case you have written
 such a system).
 
@@ -78,7 +78,7 @@ or:
 ## `MooseX::Runnable::Run`
 
 If you don't want to invoke your app with `mx-run`, you can write a
-custom version using [MooseX::Runnable::Run](http://search.cpan.org/perldoc?MooseX::Runnable::Run).
+custom version using [MooseX::Runnable::Run](https://metacpan.org/pod/MooseX::Runnable::Run).
 
 # ARCHITECTURE
 
@@ -86,7 +86,7 @@ custom version using [MooseX::Runnable::Run](http://search.cpan.org/perldoc?Moos
 from the command-line, and application developers can add roles to
 their class to control behavior.
 
-For example, if you consume [MooseX::Getopt](http://search.cpan.org/perldoc?MooseX::Getopt), the
+For example, if you consume [MooseX::Getopt](https://metacpan.org/pod/MooseX::Getopt), the
 command-line will be parsed with `MooseX::Getopt`.  Any recognized
 args will be used to instantiate your class, and any extra args will
 be passed to `run`.
@@ -110,7 +110,7 @@ the same terms as the Perl 5 programming language system itself.
 
 # CONTRIBUTORS
 
+- Doug Bell <doug.bell@baml.com>
 - Duke Leto <jonathan@leto.net>
 - Jonathan Rockway <jon@jrock.us>
 - Karen Etheridge <ether@cpan.org>
-- Karen Etheridge <karen@etheridge.ca>
