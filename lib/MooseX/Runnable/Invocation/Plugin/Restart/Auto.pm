@@ -8,10 +8,6 @@ use Path::Tiny; # exports path()
 use File::ChangeNotify;
 use namespace::autoclean;
 
-# coerce ArrayRef[Dir], from ArrayRef[Any], via {[
-#     map { warn $_; Path::Class::dir($_) } @$_,
-# ]};
-
 coerce RegexpRef, from Str, via { qr/$_/i };
 
 
