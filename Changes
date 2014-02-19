@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        - restore mx-run executable lost in 0.04
 
 0.06      2013-11-20 06:36:45Z
         - fixed failing unit tests that define classes inline
