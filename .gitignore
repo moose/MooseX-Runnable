@@ -1,3 +1,6 @@
+/.ackrc
 /.build/
-!.gitignore
-/MooseX-Runnable-*
+!/.gitignore
+/.latest
+/MooseX-Runnable-*/
+/MooseX-Runnable-*.tar.gz
