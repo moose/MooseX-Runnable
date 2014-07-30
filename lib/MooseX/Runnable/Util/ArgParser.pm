@@ -1,5 +1,5 @@
 package MooseX::Runnable::Util::ArgParser;
-# ABSTRACT: parse @ARGV for mx-run
+# ABSTRACT: parse @ARGV for C<mx-run>
 
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
@@ -263,8 +263,6 @@ __END__
 
 =pod
 
-=for stopwords mx
-
 =head1 SYNOPSIS
 
     my $parser = MooseX::Runnable::Util::ArgParser->new(
@@ -278,3 +276,4 @@ __END__
     $parser->is_help;
     $parser->app_args;
 
+=cut
