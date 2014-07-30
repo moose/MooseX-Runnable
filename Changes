@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.08      2014-07-30 21:44:54Z
         - fix untranslated shebang in mx-run (github #2)
 
 0.07      2014-02-19 05:04:37Z

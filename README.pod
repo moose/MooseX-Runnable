@@ -1,14 +1,18 @@
-# NAME
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
 
 MooseX::Runnable - Tag a class as a runnable application
 
-# VERSION
+=head1 VERSION
 
-version 0.07
+version 0.08
 
-# SYNOPSIS
+=head1 SYNOPSIS
 
-Create a class, tag it runnable, and provide a `run` method:
+Create a class, tag it runnable, and provide a C<run> method:
 
     package App::HelloWorld;
     use feature 'say';
@@ -23,94 +27,111 @@ Create a class, tag it runnable, and provide a `run` method:
     }
 
 Then you can run this class as an application with the included
-`mx-run` script:
+C<mx-run> script:
 
     $ mx-run App::HelloWorld jrockway
     Hello, jrockway.
     $
 
-`MooseX::Runnable` supports [MooseX::Getopt](https://metacpan.org/pod/MooseX::Getopt), and
+C<MooseX::Runnable> supports L<MooseX::Getopt|MooseX::Getopt>, and
 other similar systems (and is extensible, in case you have written
 such a system).
 
-# DESCRIPTION
+=head1 DESCRIPTION
 
 MooseX::Runnable is a framework for making classes runnable
 applications.  This role doesn't do anything other than tell the rest
 of the framework that your class is a runnable application that has a
-`run` method which accepts arguments and returns the process' exit
+C<run> method which accepts arguments and returns the process' exit
 code.
 
 This is a convention that the community has been using for a while.
 This role tells the computer that your class uses this convention, and
 let's the computer abstract away some of the tedium this entails.
 
-# REQUIRED METHODS
+=head1 REQUIRED METHODS
 
-## run
+=head2 run
 
-Your class must implement `run`.  It accepts the command-line args
+Your class must implement C<run>.  It accepts the command-line args
 (that were not consumed by another parser, if applicable) and returns
-an integer representing the UNIX exit value.  `return 0` means
+an integer representing the UNIX exit value.  C<return 0> means
 success.
 
-# THINGS YOU GET
+=head1 THINGS YOU GET
 
-## `mx-run`
+=head2 C<mx-run>
 
-This is a script that accepts a `MooseX::Runnable` class and tries to
-run it, using `MooseX::Runnable::Run`.
+This is a script that accepts a C<MooseX::Runnable> class and tries to
+run it, using C<MooseX::Runnable::Run>.
 
 The syntax is:
 
-    mx-run Class::Name
+  mx-run Class::Name
 
-    mx-run <args for mx-run> -- Class::Name <args for Class::Name>
+  mx-run <args for mx-run> -- Class::Name <args for Class::Name>
 
 for example:
 
-    mx-run -Ilib App::HelloWorld --args --go --here
+  mx-run -Ilib App::HelloWorld --args --go --here
 
 or:
 
-    mx-run -Ilib +Persistent --port 8080 -- App::HelloWorld --args --go --here
+  mx-run -Ilib +Persistent --port 8080 -- App::HelloWorld --args --go --here
 
-## `MooseX::Runnable::Run`
+=head2 C<MooseX::Runnable::Run>
 
-If you don't want to invoke your app with `mx-run`, you can write a
-custom version using [MooseX::Runnable::Run](https://metacpan.org/pod/MooseX::Runnable::Run).
+If you don't want to invoke your app with C<mx-run>, you can write a
+custom version using L<MooseX::Runnable::Run|MooseX::Runnable::Run>.
 
-# ARCHITECTURE
+=head1 ARCHITECTURE
 
-`MX::Runnable` is designed to be extensible; users can run plugins
+C<MX::Runnable> is designed to be extensible; users can run plugins
 from the command-line, and application developers can add roles to
 their class to control behavior.
 
-For example, if you consume [MooseX::Getopt](https://metacpan.org/pod/MooseX::Getopt), the
-command-line will be parsed with `MooseX::Getopt`.  Any recognized
+For example, if you consume L<MooseX::Getopt|MooseX::Getopt>, the
+command-line will be parsed with C<MooseX::Getopt>.  Any recognized
 args will be used to instantiate your class, and any extra args will
-be passed to `run`.
+be passed to C<run>.
 
-# BUGS
+=head1 BUGS
 
 Many of the plugins shipped are unstable; they may go away, change,
 break, etc.  If there is no documentation for a plugin, it is probably
 just a prototype.
 
-# AUTHOR
+=head1 AUTHOR
 
 Jonathan Rockway <jrockway@cpan.org>
 
-# COPYRIGHT AND LICENSE
+=head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2009 by Jonathan Rockway.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-# CONTRIBUTORS
+=head1 CONTRIBUTORS
 
-- Doug Bell <doug.bell@baml.com>
-- Duke Leto <jonathan@leto.net>
-- Jonathan Rockway <jon@jrock.us>
-- Karen Etheridge <ether@cpan.org>
+=over 4
+
+=item *
+
+Doug Bell <doug.bell@baml.com>
+
+=item *
+
+Duke Leto <jonathan@leto.net>
+
+=item *
+
+Jonathan Rockway <jon@jrock.us>
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=back
+
+=cut
