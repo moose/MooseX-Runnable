@@ -1,6 +1,8 @@
 package MooseX::Runnable::Util::ArgParser;
 # ABSTRACT: parse @ARGV for C<mx-run>
 
+our $VERSION = '0.10';
+
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);

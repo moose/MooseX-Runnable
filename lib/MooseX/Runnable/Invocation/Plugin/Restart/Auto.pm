@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Auto;
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use MooseX::Types;
 use MooseX::Types::Moose qw(ArrayRef RegexpRef Any Str);

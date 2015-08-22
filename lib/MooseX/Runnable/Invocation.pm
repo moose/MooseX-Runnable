@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation;
 
+our $VERSION = '0.10';
+
 use Moose;
 use MooseX::Types -declare => ['RunnableClass'];
 use MooseX::Types::Moose qw(Str HashRef ArrayRef);

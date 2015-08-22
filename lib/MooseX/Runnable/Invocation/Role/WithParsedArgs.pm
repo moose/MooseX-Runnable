@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation::Role::WithParsedArgs;
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use MooseX::Runnable::Util::ArgParser;
 use namespace::autoclean;

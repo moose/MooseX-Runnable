@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Restart;
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use MooseX::Types::Moose qw(Str);
 use AnyEvent;

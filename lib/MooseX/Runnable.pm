@@ -2,6 +2,8 @@ package MooseX::Runnable;
 # ABSTRACT: Tag a class as a runnable application
 # KEYWORDS: moose extension executable execute script binary run modulino
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use namespace::autoclean;
 

@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Profile;
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use namespace::autoclean;
 

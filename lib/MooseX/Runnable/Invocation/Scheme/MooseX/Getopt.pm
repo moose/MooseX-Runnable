@@ -1,5 +1,7 @@
 package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
 
+our $VERSION = '0.10';
+
 use Moose::Role;
 use namespace::autoclean;
 
