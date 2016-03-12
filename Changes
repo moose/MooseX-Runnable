@@ -1,6 +1,7 @@
 Revision history for MooseX-Runnable
 
 {{$NEXT}}
+        - switch from using List::MoreUtils to List::SomeUtils
 
 0.09      2014-08-06 05:57:15Z
         - re-release to remove README.pod from shipped dist
