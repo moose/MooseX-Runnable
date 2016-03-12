@@ -35,7 +35,8 @@ has 'watch_directories' => (
 has 'watcher' => (
     is         => 'ro',
     isa        => 'File::ChangeNotify::Watcher',
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_watcher',
 );
 
 sub _build_initargs_from_cmdline {

@@ -22,40 +22,46 @@ has 'argv' => (
 has 'class_name' => (
     is         => 'ro',
     isa        => Str,
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_class_name',
 );
 
 has 'modules' => (
     is         => 'ro',
     isa        => ArrayRef[Str],
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_modules',
     auto_deref => 1,
 );
 
 has 'include_paths' => (
     is         => 'ro',
     isa        => ArrayRef[Path],
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_include_paths',
     auto_deref => 1,
 );
 
 has 'plugins' => (
     is         => 'ro',
     isa        => HashRef[ArrayRef[Str]],
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_plugins',
 );
 
 has 'app_args' => (
     is         => 'ro',
     isa        => ArrayRef[Str],
-    lazy_build => 1,
+    lazy       => 1,
+    builder    => '_build_app_args',
     auto_deref => 1,
 );
 
 has 'is_help' => (
     is       => 'ro',
     isa      => Bool,
-    lazy_build => 1,
+    lazy     => 1,
+    builder  => '_build_is_help',
 );
 
 
