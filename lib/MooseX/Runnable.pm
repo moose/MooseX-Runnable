@@ -100,7 +100,7 @@ command-line will be parsed with C<MooseX::Getopt>.  Any recognized
 args will be used to instantiate your class, and any extra args will
 be passed to C<run>.
 
-=head1 BUGS
+=head1 CAVEATS
 
 Many of the plugins shipped are unstable; they may go away, change,
 break, etc.  If there is no documentation for a plugin, it is probably
