@@ -21,7 +21,7 @@ has 'watch_regexp' => (
     isa      => RegexpRef,
     required => 1,
     coerce   => 1,
-    default  => sub { qr/^[^.].+[.]pmc?$/i },
+    default  => sub { qr/^[^.].+\.pmc?$/i },
 );
 
 has 'watch_directories' => (
