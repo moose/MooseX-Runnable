@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Auto;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose::Role;
 use MooseX::Types;

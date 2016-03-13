@@ -3,7 +3,7 @@ use warnings;
 package MooseX::Runnable::Run;
 # ABSTRACT: Run a MooseX::Runnable class as an application
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use MooseX::Runnable::Invocation;
 use namespace::autoclean;

@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose;
 use MooseX::Types -declare => ['RunnableClass'];

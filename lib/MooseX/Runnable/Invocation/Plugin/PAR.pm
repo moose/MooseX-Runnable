@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::PAR;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose::Role;
 use Module::ScanDeps ();

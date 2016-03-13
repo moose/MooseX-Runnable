@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Role::WithParsedArgs;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose::Role;
 use MooseX::Runnable::Util::ArgParser;

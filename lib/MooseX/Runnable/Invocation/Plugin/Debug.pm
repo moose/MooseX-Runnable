@@ -1,7 +1,7 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
 # ABSTRACT: print debugging information
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose::Role;
 use namespace::autoclean;

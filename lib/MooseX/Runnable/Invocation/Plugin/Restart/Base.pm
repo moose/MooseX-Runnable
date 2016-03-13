@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Base;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose::Role;
 use MooseX::Types::Moose qw(Int);
