@@ -5,7 +5,7 @@ our $VERSION = '0.11';
 use Moose;
 use MooseX::Types -declare => ['RunnableClass'];
 use MooseX::Types::Moose qw(Str HashRef ArrayRef);
-use List::SomeUtils qw(uniq);
+use List::Util 1.45 qw(uniq);
 use Params::Util qw(_CLASS);
 use Class::Load;
 use namespace::autoclean;

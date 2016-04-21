@@ -1,6 +1,7 @@
 Revision history for MooseX-Runnable
 
 {{$NEXT}}
+        - switch from using List::SomeUtils to List::Util
 
 0.10      2016-03-13 00:40:21Z
         - switch from using List::MoreUtils to List::SomeUtils
